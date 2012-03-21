@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3622DE86151A604B004DC6AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3622DE85151A604B004DC6AA /* Cocoa.framework */; };
+		3622DE90151A604B004DC6AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3622DE8E151A604B004DC6AA /* InfoPlist.strings */; };
+		3622DE92151A604B004DC6AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3622DE91151A604B004DC6AA /* main.m */; };
+		3622DE96151A604B004DC6AA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3622DE94151A604B004DC6AA /* Credits.rtf */; };
+		3622DE99151A604B004DC6AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3622DE98151A604B004DC6AA /* AppDelegate.m */; };
+		3622DE9C151A604C004DC6AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3622DE9A151A604C004DC6AA /* MainMenu.xib */; };
+		3622DED6151A6402004DC6AA /* libUDPClientServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3622DED5151A6402004DC6AA /* libUDPClientServer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3622DE81151A604B004DC6AA /* UDPClientServerTestAppClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPClientServerTestAppClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3622DE85151A604B004DC6AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3622DE88151A604B004DC6AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3622DE89151A604B004DC6AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3622DE8A151A604B004DC6AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3622DE8D151A604B004DC6AA /* UDPClientServerTestAppClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UDPClientServerTestAppClient-Info.plist"; sourceTree = "<group>"; };
+		3622DE8F151A604B004DC6AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3622DE91151A604B004DC6AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3622DE93151A604B004DC6AA /* UDPClientServerTestAppClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDPClientServerTestAppClient-Prefix.pch"; sourceTree = "<group>"; };
+		3622DE95151A604B004DC6AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3622DE97151A604B004DC6AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3622DE98151A604B004DC6AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3622DE9B151A604C004DC6AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3622DED5151A6402004DC6AA /* libUDPClientServer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUDPClientServer.a; path = "../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug/libUDPClientServer.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3622DE7E151A604B004DC6AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3622DE86151A604B004DC6AA /* Cocoa.framework in Frameworks */,
+				3622DED6151A6402004DC6AA /* libUDPClientServer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3622DE76151A604B004DC6AA = {
+			isa = PBXGroup;
+			children = (
+				3622DE8B151A604B004DC6AA /* UDPClientServerTestAppClient */,
+				3622DE84151A604B004DC6AA /* Frameworks */,
+				3622DE82151A604B004DC6AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3622DE82151A604B004DC6AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3622DE81151A604B004DC6AA /* UDPClientServerTestAppClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3622DE84151A604B004DC6AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3622DED5151A6402004DC6AA /* libUDPClientServer.a */,
+				3622DE85151A604B004DC6AA /* Cocoa.framework */,
+				3622DE87151A604B004DC6AA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3622DE87151A604B004DC6AA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3622DE88151A604B004DC6AA /* AppKit.framework */,
+				3622DE89151A604B004DC6AA /* CoreData.framework */,
+				3622DE8A151A604B004DC6AA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3622DE8B151A604B004DC6AA /* UDPClientServerTestAppClient */ = {
+			isa = PBXGroup;
+			children = (
+				3622DE97151A604B004DC6AA /* AppDelegate.h */,
+				3622DE98151A604B004DC6AA /* AppDelegate.m */,
+				3622DE9A151A604C004DC6AA /* MainMenu.xib */,
+				3622DE8C151A604B004DC6AA /* Supporting Files */,
+			);
+			path = UDPClientServerTestAppClient;
+			sourceTree = "<group>";
+		};
+		3622DE8C151A604B004DC6AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3622DE8D151A604B004DC6AA /* UDPClientServerTestAppClient-Info.plist */,
+				3622DE8E151A604B004DC6AA /* InfoPlist.strings */,
+				3622DE91151A604B004DC6AA /* main.m */,
+				3622DE93151A604B004DC6AA /* UDPClientServerTestAppClient-Prefix.pch */,
+				3622DE94151A604B004DC6AA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3622DE80151A604B004DC6AA /* UDPClientServerTestAppClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3622DE9F151A604C004DC6AA /* Build configuration list for PBXNativeTarget "UDPClientServerTestAppClient" */;
+			buildPhases = (
+				3622DE7D151A604B004DC6AA /* Sources */,
+				3622DE7E151A604B004DC6AA /* Frameworks */,
+				3622DE7F151A604B004DC6AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UDPClientServerTestAppClient;
+			productName = UDPClientServerTestAppClient;
+			productReference = 3622DE81151A604B004DC6AA /* UDPClientServerTestAppClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3622DE78151A604B004DC6AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = LoFT;
+			};
+			buildConfigurationList = 3622DE7B151A604B004DC6AA /* Build configuration list for PBXProject "UDPClientServerTestAppClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3622DE76151A604B004DC6AA;
+			productRefGroup = 3622DE82151A604B004DC6AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3622DE80151A604B004DC6AA /* UDPClientServerTestAppClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3622DE7F151A604B004DC6AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3622DE90151A604B004DC6AA /* InfoPlist.strings in Resources */,
+				3622DE96151A604B004DC6AA /* Credits.rtf in Resources */,
+				3622DE9C151A604C004DC6AA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3622DE7D151A604B004DC6AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3622DE92151A604B004DC6AA /* main.m in Sources */,
+				3622DE99151A604B004DC6AA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3622DE8E151A604B004DC6AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3622DE8F151A604B004DC6AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3622DE94151A604B004DC6AA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3622DE95151A604B004DC6AA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3622DE9A151A604C004DC6AA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3622DE9B151A604C004DC6AA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3622DE9D151A604C004DC6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../UDPClientServer/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3622DE9E151A604C004DC6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../UDPClientServer/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3622DEA0151A604C004DC6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServerTestAppClient/UDPClientServerTestAppClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../UDPClientServer/**";
+				INFOPLIST_FILE = "UDPClientServerTestAppClient/UDPClientServerTestAppClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3622DEA1151A604C004DC6AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServerTestAppClient/UDPClientServerTestAppClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../UDPClientServer/**";
+				INFOPLIST_FILE = "UDPClientServerTestAppClient/UDPClientServerTestAppClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3622DE7B151A604B004DC6AA /* Build configuration list for PBXProject "UDPClientServerTestAppClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3622DE9D151A604C004DC6AA /* Debug */,
+				3622DE9E151A604C004DC6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3622DE9F151A604C004DC6AA /* Build configuration list for PBXNativeTarget "UDPClientServerTestAppClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3622DEA0151A604C004DC6AA /* Debug */,
+				3622DEA1151A604C004DC6AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3622DE78151A604B004DC6AA /* Project object */;
+}

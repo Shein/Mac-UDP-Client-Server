@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		360892C6151A1ED0002DD234 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360892C5151A1ED0002DD234 /* Cocoa.framework */; };
 		360892D0151A1ED0002DD234 /* UDPClientServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892CF151A1ED0002DD234 /* UDPClientServer.m */; };
+		360892D8151A1F1A002DD234 /* UDPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892D6151A1F1A002DD234 /* UDPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		360892D9151A1F1A002DD234 /* UDPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892D7151A1F1A002DD234 /* UDPServer.m */; };
+		360892DC151A1F92002DD234 /* UDPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892DA151A1F92002DD234 /* UDPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		360892DD151A1F92002DD234 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892DB151A1F92002DD234 /* UDPClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,9 +21,13 @@
 		360892C8151A1ED0002DD234 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		360892C9151A1ED0002DD234 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		360892CA151A1ED0002DD234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		360892CD151A1ED0002DD234 /* UDPClientServer-Prefix.pch */ = {isa = PBXFileReference; path = "UDPClientServer-Prefix.pch"; sourceTree = "<group>"; };
-		360892CE151A1ED0002DD234 /* UDPClientServer.h */ = {isa = PBXFileReference; path = UDPClientServer.h; sourceTree = "<group>"; };
+		360892CD151A1ED0002DD234 /* UDPClientServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDPClientServer-Prefix.pch"; sourceTree = "<group>"; };
+		360892CE151A1ED0002DD234 /* UDPClientServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPClientServer.h; sourceTree = "<group>"; };
 		360892CF151A1ED0002DD234 /* UDPClientServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPClientServer.m; sourceTree = "<group>"; };
+		360892D6151A1F1A002DD234 /* UDPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPServer.h; sourceTree = "<group>"; };
+		360892D7151A1F1A002DD234 /* UDPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPServer.m; sourceTree = "<group>"; };
+		360892DA151A1F92002DD234 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
+		360892DB151A1F92002DD234 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,10 @@
 				360892CE151A1ED0002DD234 /* UDPClientServer.h */,
 				360892CF151A1ED0002DD234 /* UDPClientServer.m */,
 				360892CC151A1ED0002DD234 /* Supporting Files */,
+				360892D6151A1F1A002DD234 /* UDPServer.h */,
+				360892D7151A1F1A002DD234 /* UDPServer.m */,
+				360892DA151A1F92002DD234 /* UDPClient.h */,
+				360892DB151A1F92002DD234 /* UDPClient.m */,
 			);
 			path = UDPClientServer;
 			sourceTree = "<group>";
@@ -95,6 +107,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360892D8151A1F1A002DD234 /* UDPServer.h in Headers */,
+				360892DC151A1F92002DD234 /* UDPClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				360892D0151A1ED0002DD234 /* UDPClientServer.m in Sources */,
+				360892D9151A1F1A002DD234 /* UDPServer.m in Sources */,
+				360892DD151A1F92002DD234 /* UDPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
