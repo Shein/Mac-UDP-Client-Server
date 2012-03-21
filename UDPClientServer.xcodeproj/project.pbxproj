@@ -1,0 +1,245 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		360892C6151A1ED0002DD234 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360892C5151A1ED0002DD234 /* Cocoa.framework */; };
+		360892D0151A1ED0002DD234 /* UDPClientServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892CF151A1ED0002DD234 /* UDPClientServer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		360892C2151A1ED0002DD234 /* libUDPClientServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUDPClientServer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		360892C5151A1ED0002DD234 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		360892C8151A1ED0002DD234 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		360892C9151A1ED0002DD234 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		360892CA151A1ED0002DD234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		360892CD151A1ED0002DD234 /* UDPClientServer-Prefix.pch */ = {isa = PBXFileReference; path = "UDPClientServer-Prefix.pch"; sourceTree = "<group>"; };
+		360892CE151A1ED0002DD234 /* UDPClientServer.h */ = {isa = PBXFileReference; path = UDPClientServer.h; sourceTree = "<group>"; };
+		360892CF151A1ED0002DD234 /* UDPClientServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPClientServer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		360892BF151A1ED0002DD234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				360892C6151A1ED0002DD234 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		360892B7151A1ED0002DD234 = {
+			isa = PBXGroup;
+			children = (
+				360892CB151A1ED0002DD234 /* UDPClientServer */,
+				360892C4151A1ED0002DD234 /* Frameworks */,
+				360892C3151A1ED0002DD234 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		360892C3151A1ED0002DD234 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				360892C2151A1ED0002DD234 /* libUDPClientServer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		360892C4151A1ED0002DD234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				360892C5151A1ED0002DD234 /* Cocoa.framework */,
+				360892C7151A1ED0002DD234 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		360892C7151A1ED0002DD234 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				360892C8151A1ED0002DD234 /* AppKit.framework */,
+				360892C9151A1ED0002DD234 /* CoreData.framework */,
+				360892CA151A1ED0002DD234 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		360892CB151A1ED0002DD234 /* UDPClientServer */ = {
+			isa = PBXGroup;
+			children = (
+				360892CE151A1ED0002DD234 /* UDPClientServer.h */,
+				360892CF151A1ED0002DD234 /* UDPClientServer.m */,
+				360892CC151A1ED0002DD234 /* Supporting Files */,
+			);
+			path = UDPClientServer;
+			sourceTree = "<group>";
+		};
+		360892CC151A1ED0002DD234 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				360892CD151A1ED0002DD234 /* UDPClientServer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		360892C0151A1ED0002DD234 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		360892C1151A1ED0002DD234 /* UDPClientServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 360892D3151A1ED0002DD234 /* Build configuration list for PBXNativeTarget "UDPClientServer" */;
+			buildPhases = (
+				360892BE151A1ED0002DD234 /* Sources */,
+				360892BF151A1ED0002DD234 /* Frameworks */,
+				360892C0151A1ED0002DD234 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UDPClientServer;
+			productName = UDPClientServer;
+			productReference = 360892C2151A1ED0002DD234 /* libUDPClientServer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		360892B9151A1ED0002DD234 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = LoFT;
+			};
+			buildConfigurationList = 360892BC151A1ED0002DD234 /* Build configuration list for PBXProject "UDPClientServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 360892B7151A1ED0002DD234;
+			productRefGroup = 360892C3151A1ED0002DD234 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				360892C1151A1ED0002DD234 /* UDPClientServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		360892BE151A1ED0002DD234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				360892D0151A1ED0002DD234 /* UDPClientServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		360892D1151A1ED0002DD234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		360892D2151A1ED0002DD234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		360892D4151A1ED0002DD234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServer/UDPClientServer-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		360892D5151A1ED0002DD234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServer/UDPClientServer-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		360892BC151A1ED0002DD234 /* Build configuration list for PBXProject "UDPClientServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				360892D1151A1ED0002DD234 /* Debug */,
+				360892D2151A1ED0002DD234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		360892D3151A1ED0002DD234 /* Build configuration list for PBXNativeTarget "UDPClientServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				360892D4151A1ED0002DD234 /* Debug */,
+				360892D5151A1ED0002DD234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 360892B9151A1ED0002DD234 /* Project object */;
+}
