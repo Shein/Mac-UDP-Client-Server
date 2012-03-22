@@ -87,9 +87,6 @@
 		360892DA151A1F92002DD234 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		360892DB151A1F92002DD234 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		36C7CC44151B293F00ED5881 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		36C7CC48151B293F00ED5881 /* UDPClientServer-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDPClientServer-iOS-Prefix.pch"; sourceTree = "<group>"; };
-		36C7CC49151B293F00ED5881 /* UDPClientServer_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPClientServer_iOS.h; sourceTree = "<group>"; };
-		36C7CC4A151B293F00ED5881 /* UDPClientServer_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPClientServer_iOS.m; sourceTree = "<group>"; };
 		36C7CC5D151B294E00ED5881 /* libUDPClientServer-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUDPClientServer-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				360892CB151A1ED0002DD234 /* UDPClientServer */,
-				36C7CC46151B293F00ED5881 /* UDPClientServer-iOS */,
 				360892C4151A1ED0002DD234 /* Frameworks */,
 				360892C3151A1ED0002DD234 /* Products */,
 			);
@@ -170,24 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				360892CD151A1ED0002DD234 /* UDPClientServer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		36C7CC46151B293F00ED5881 /* UDPClientServer-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				36C7CC49151B293F00ED5881 /* UDPClientServer_iOS.h */,
-				36C7CC4A151B293F00ED5881 /* UDPClientServer_iOS.m */,
-				36C7CC47151B293F00ED5881 /* Supporting Files */,
-			);
-			path = "UDPClientServer-iOS";
-			sourceTree = "<group>";
-		};
-		36C7CC47151B293F00ED5881 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				36C7CC48151B293F00ED5881 /* UDPClientServer-iOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -293,7 +271,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo ${BUILT_PRODUCTS_DIR}";
+			shellScript = "echo \"Creating universal iOS and Mac OS X build...\"\n\nOSX_BUILD_DIR=${SYMROOT}/${CONFIGURATION}\nOSX_EXECUTABLE_NAME=\"libUDPClientServer.a\"\nIOS_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-univeral-ios\nIOS_EXECUTABLE_NAME=\"libUDPClientServer-iOS.a\"\n\nUNIVERSAL_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-universal\nUNIVERSAL_EXECUTABLE_NAME=\"libudp.a\"\nmkdir ${UNIVERSAL_BUILD_DIR}\nrm -rf \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\"\n\necho \"lipo-ing with configuration ( ${CONFIGURATION} ) to output file ${UNIVERSAL_BUILD_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\" \"${IOS_BUILD_DIR}/${IOS_EXECUTABLE_NAME}\" \"${OSX_BUILD_DIR}/${OSX_EXECUTABLE_NAME}\"\n\n";
+			showEnvVarsInLog = 0;
 		};
 		36C7CC6E151B2F9500ED5881 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -306,7 +285,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DEBUG=\"true\"\n\nif [ $DEBUG = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\necho \"PLATFORM_NAME = $PLATFORM_NAME\"\necho \"SDK_NAME = $SDK_NAME\"\nfi\n\nSDK_VERSION = \"AAAAAA\"#$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\necho \"SDK VERSION = $SDK_VERSION\"\n\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ] \nthen\nOTHER_BUILD_SDK = iphoneos${SDK_VERSION}\nelse\nOTHER_BUILD_SDK = iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode set to build for ${PLATFORM_NAME} with SDK ${SDK_VERSION} and deployment target ${IPHONEOS_DEPLOYMENT_TARGET}\"\necho \"We will also build for ${OTHER_BUILD_SDK}\"";
+			shellScript = "############ Setup iOS Universal Build ############\n\n\nDEBUG=\"false\"\n\nif [ $DEBUG = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\necho \"PLATFORM_NAME = $PLATFORM_NAME\"\necho \"SDK_NAME = $SDK_NAME\"\necho \"########### /TEST #############\"\nfi\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\necho \"SDK VERSION = $SDK_VERSION\"\n\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ] \nthen\nOTHER_BUILD_SDK=iphoneos${SDK_VERSION}\nelse\nOTHER_BUILD_SDK=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode set to build for ${PLATFORM_NAME} with SDK ${SDK_VERSION} and deployment target ${IPHONEOS_DEPLOYMENT_TARGET}\"\necho \"We will also build for ${OTHER_BUILD_SDK}\"\n\n\n############### Build For Missing Target ###############\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECUSION: I am NOT the root invocation so I'm not going to recurse\"\nelse\nexport ALREADYINVOKED=\"true\"\n\nACTION=\"build\"\n\necho \"RECURSION: I AM THE ROOM... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_BUILD_SDK}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\"\n\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -configuration \"${CONFIGURATION}\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_BUILD_SDK}\" ${ACTION} RUN_CLANG_STATYC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n\n# Merge Simulator and Device builds into one fat binary for each configuration\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking devive build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nUNIVERSAL_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-univeral-ios\necho \"Universal build will go to: ${UNIVERSAL_BUILD_DIR}\"\n\nmkdir -p ${UNIVERSAL_BUILD_DIR}\nrm -rf \"${UNIVERSAL_BUILD_DIR}/${EXECUTABLE_NAME}\"\n\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file ${UNIVERSAL_BUILD_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${UNIVERSAL_BUILD_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -435,14 +415,14 @@
 		36C7CC64151B2A4500ED5881 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "UDPClientServer Universal";
+				PRODUCT_NAME = "UDPClientServer-Universal";
 			};
 			name = Debug;
 		};
 		36C7CC65151B2A4500ED5881 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "UDPClientServer Universal";
+				PRODUCT_NAME = "UDPClientServer-Universal";
 			};
 			name = Release;
 		};
@@ -483,6 +463,7 @@
 				36C7CC65151B2A4500ED5881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

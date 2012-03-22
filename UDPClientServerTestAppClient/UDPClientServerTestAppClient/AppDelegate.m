@@ -19,7 +19,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    
     client = [[UDPClient alloc] initWithDestinationIP:"192.168.0.13" andPort:11112];
 }
 

@@ -13,7 +13,7 @@
 		3622DE96151A604B004DC6AA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3622DE94151A604B004DC6AA /* Credits.rtf */; };
 		3622DE99151A604B004DC6AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3622DE98151A604B004DC6AA /* AppDelegate.m */; };
 		3622DE9C151A604C004DC6AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3622DE9A151A604C004DC6AA /* MainMenu.xib */; };
-		3622DED6151A6402004DC6AA /* libUDPClientServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3622DED5151A6402004DC6AA /* libUDPClientServer.a */; };
+		36FFE289151B8DC20053B9E8 /* libudp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FFE288151B8DC20053B9E8 /* libudp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		3622DE97151A604B004DC6AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3622DE98151A604B004DC6AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3622DE9B151A604C004DC6AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		3622DED5151A6402004DC6AA /* libUDPClientServer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUDPClientServer.a; path = "../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug/libUDPClientServer.a"; sourceTree = "<group>"; };
+		36FFE288151B8DC20053B9E8 /* libudp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libudp.a; path = "../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug-universal/libudp.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3622DE86151A604B004DC6AA /* Cocoa.framework in Frameworks */,
-				3622DED6151A6402004DC6AA /* libUDPClientServer.a in Frameworks */,
+				36FFE289151B8DC20053B9E8 /* libudp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		3622DE84151A604B004DC6AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3622DED5151A6402004DC6AA /* libUDPClientServer.a */,
+				36FFE288151B8DC20053B9E8 /* libudp.a */,
 				3622DE85151A604B004DC6AA /* Cocoa.framework */,
 				3622DE87151A604B004DC6AA /* Other Frameworks */,
 			);
@@ -262,6 +262,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug-universal\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -278,6 +279,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug-universal\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -303,6 +305,7 @@
 				3622DEA1151A604C004DC6AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

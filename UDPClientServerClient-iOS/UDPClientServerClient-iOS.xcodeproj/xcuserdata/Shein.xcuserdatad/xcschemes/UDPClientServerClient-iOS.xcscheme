@@ -13,10 +13,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36C7CC4F151B294E00ED5881"
-               BuildableName = "libUDPClientServer-iOS.a"
-               BlueprintName = "UDPClientServer iOS"
-               ReferencedContainer = "container:UDPClientServer.xcodeproj">
+               BlueprintIdentifier = "36DEC1E2151B8C0D00B83E4C"
+               BuildableName = "UDPClientServerClient-iOS.app"
+               BlueprintName = "UDPClientServerClient-iOS"
+               ReferencedContainer = "container:UDPClientServerClient-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,15 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36DEC1E2151B8C0D00B83E4C"
+            BuildableName = "UDPClientServerClient-iOS.app"
+            BlueprintName = "UDPClientServerClient-iOS"
+            ReferencedContainer = "container:UDPClientServerClient-iOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -38,6 +47,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36DEC1E2151B8C0D00B83E4C"
+            BuildableName = "UDPClientServerClient-iOS.app"
+            BlueprintName = "UDPClientServerClient-iOS"
+            ReferencedContainer = "container:UDPClientServerClient-iOS.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -47,6 +65,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36DEC1E2151B8C0D00B83E4C"
+            BuildableName = "UDPClientServerClient-iOS.app"
+            BlueprintName = "UDPClientServerClient-iOS"
+            ReferencedContainer = "container:UDPClientServerClient-iOS.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

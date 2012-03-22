@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36DEC1E8151B8C0D00B83E4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DEC1E7151B8C0D00B83E4C /* UIKit.framework */; };
+		36DEC1EA151B8C0D00B83E4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DEC1E9151B8C0D00B83E4C /* Foundation.framework */; };
+		36DEC1EC151B8C0D00B83E4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DEC1EB151B8C0D00B83E4C /* CoreGraphics.framework */; };
+		36DEC1F2151B8C0D00B83E4C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36DEC1F0151B8C0D00B83E4C /* InfoPlist.strings */; };
+		36DEC1F4151B8C0D00B83E4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DEC1F3151B8C0D00B83E4C /* main.m */; };
+		36DEC1F8151B8C0D00B83E4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DEC1F7151B8C0D00B83E4C /* AppDelegate.m */; };
+		36DEC1FB151B8C0D00B83E4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DEC1FA151B8C0D00B83E4C /* ViewController.m */; };
+		36DEC1FE151B8C0D00B83E4C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DEC1FC151B8C0D00B83E4C /* ViewController_iPhone.xib */; };
+		36DEC201151B8C0D00B83E4C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DEC1FF151B8C0D00B83E4C /* ViewController_iPad.xib */; };
+		36DEC210151B8CDD00B83E4C /* libudp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DEC20F151B8CDD00B83E4C /* libudp.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		36DEC1E3151B8C0D00B83E4C /* UDPClientServerClient-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UDPClientServerClient-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36DEC1E7151B8C0D00B83E4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		36DEC1E9151B8C0D00B83E4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		36DEC1EB151B8C0D00B83E4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		36DEC1EF151B8C0D00B83E4C /* UDPClientServerClient-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UDPClientServerClient-iOS-Info.plist"; sourceTree = "<group>"; };
+		36DEC1F1151B8C0D00B83E4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		36DEC1F3151B8C0D00B83E4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36DEC1F5151B8C0D00B83E4C /* UDPClientServerClient-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDPClientServerClient-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		36DEC1F6151B8C0D00B83E4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36DEC1F7151B8C0D00B83E4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36DEC1F9151B8C0D00B83E4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		36DEC1FA151B8C0D00B83E4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36DEC1FD151B8C0D00B83E4C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		36DEC200151B8C0D00B83E4C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		36DEC20F151B8CDD00B83E4C /* libudp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libudp.a; path = "../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug-universal/libudp.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36DEC1E0151B8C0D00B83E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36DEC1E8151B8C0D00B83E4C /* UIKit.framework in Frameworks */,
+				36DEC1EA151B8C0D00B83E4C /* Foundation.framework in Frameworks */,
+				36DEC1EC151B8C0D00B83E4C /* CoreGraphics.framework in Frameworks */,
+				36DEC210151B8CDD00B83E4C /* libudp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36DEC1D8151B8C0D00B83E4C = {
+			isa = PBXGroup;
+			children = (
+				36DEC1ED151B8C0D00B83E4C /* UDPClientServerClient-iOS */,
+				36DEC1E6151B8C0D00B83E4C /* Frameworks */,
+				36DEC1E4151B8C0D00B83E4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36DEC1E4151B8C0D00B83E4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36DEC1E3151B8C0D00B83E4C /* UDPClientServerClient-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36DEC1E6151B8C0D00B83E4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36DEC20F151B8CDD00B83E4C /* libudp.a */,
+				36DEC1E7151B8C0D00B83E4C /* UIKit.framework */,
+				36DEC1E9151B8C0D00B83E4C /* Foundation.framework */,
+				36DEC1EB151B8C0D00B83E4C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36DEC1ED151B8C0D00B83E4C /* UDPClientServerClient-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				36DEC1F6151B8C0D00B83E4C /* AppDelegate.h */,
+				36DEC1F7151B8C0D00B83E4C /* AppDelegate.m */,
+				36DEC1F9151B8C0D00B83E4C /* ViewController.h */,
+				36DEC1FA151B8C0D00B83E4C /* ViewController.m */,
+				36DEC1FC151B8C0D00B83E4C /* ViewController_iPhone.xib */,
+				36DEC1FF151B8C0D00B83E4C /* ViewController_iPad.xib */,
+				36DEC1EE151B8C0D00B83E4C /* Supporting Files */,
+			);
+			path = "UDPClientServerClient-iOS";
+			sourceTree = "<group>";
+		};
+		36DEC1EE151B8C0D00B83E4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36DEC1EF151B8C0D00B83E4C /* UDPClientServerClient-iOS-Info.plist */,
+				36DEC1F0151B8C0D00B83E4C /* InfoPlist.strings */,
+				36DEC1F3151B8C0D00B83E4C /* main.m */,
+				36DEC1F5151B8C0D00B83E4C /* UDPClientServerClient-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36DEC1E2151B8C0D00B83E4C /* UDPClientServerClient-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36DEC204151B8C0D00B83E4C /* Build configuration list for PBXNativeTarget "UDPClientServerClient-iOS" */;
+			buildPhases = (
+				36DEC1DF151B8C0D00B83E4C /* Sources */,
+				36DEC1E0151B8C0D00B83E4C /* Frameworks */,
+				36DEC1E1151B8C0D00B83E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UDPClientServerClient-iOS";
+			productName = "UDPClientServerClient-iOS";
+			productReference = 36DEC1E3151B8C0D00B83E4C /* UDPClientServerClient-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36DEC1DA151B8C0D00B83E4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = LoFT;
+			};
+			buildConfigurationList = 36DEC1DD151B8C0D00B83E4C /* Build configuration list for PBXProject "UDPClientServerClient-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 36DEC1D8151B8C0D00B83E4C;
+			productRefGroup = 36DEC1E4151B8C0D00B83E4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36DEC1E2151B8C0D00B83E4C /* UDPClientServerClient-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36DEC1E1151B8C0D00B83E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36DEC1F2151B8C0D00B83E4C /* InfoPlist.strings in Resources */,
+				36DEC1FE151B8C0D00B83E4C /* ViewController_iPhone.xib in Resources */,
+				36DEC201151B8C0D00B83E4C /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36DEC1DF151B8C0D00B83E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36DEC1F4151B8C0D00B83E4C /* main.m in Sources */,
+				36DEC1F8151B8C0D00B83E4C /* AppDelegate.m in Sources */,
+				36DEC1FB151B8C0D00B83E4C /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		36DEC1F0151B8C0D00B83E4C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36DEC1F1151B8C0D00B83E4C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		36DEC1FC151B8C0D00B83E4C /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36DEC1FD151B8C0D00B83E4C /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		36DEC1FF151B8C0D00B83E4C /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36DEC200151B8C0D00B83E4C /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36DEC202151B8C0D00B83E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36DEC203151B8C0D00B83E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36DEC205151B8C0D00B83E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServerClient-iOS/UDPClientServerClient-iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../UDPClientServer/**";
+				INFOPLIST_FILE = "UDPClientServerClient-iOS/UDPClientServerClient-iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug-universal\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		36DEC206151B8C0D00B83E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServerClient-iOS/UDPClientServerClient-iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../UDPClientServer/**";
+				INFOPLIST_FILE = "UDPClientServerClient-iOS/UDPClientServerClient-iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/UDPClientServer-fjcdsbrucxexrdgqaxwakgxfoedv/Build/Products/Debug-universal\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36DEC1DD151B8C0D00B83E4C /* Build configuration list for PBXProject "UDPClientServerClient-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36DEC202151B8C0D00B83E4C /* Debug */,
+				36DEC203151B8C0D00B83E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36DEC204151B8C0D00B83E4C /* Build configuration list for PBXNativeTarget "UDPClientServerClient-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36DEC205151B8C0D00B83E4C /* Debug */,
+				36DEC206151B8C0D00B83E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36DEC1DA151B8C0D00B83E4C /* Project object */;
+}
