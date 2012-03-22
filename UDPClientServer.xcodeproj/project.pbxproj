@@ -35,6 +35,7 @@
 		36C7CC55151B294E00ED5881 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360892C5151A1ED0002DD234 /* Cocoa.framework */; };
 		36C7CC57151B294E00ED5881 /* UDPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892D6151A1F1A002DD234 /* UDPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36C7CC58151B294E00ED5881 /* UDPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892DA151A1F92002DD234 /* UDPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36FFE28F151B96890053B9E8 /* libudp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FFE28E151B96890053B9E8 /* libudp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -88,6 +89,7 @@
 		360892DB151A1F92002DD234 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
 		36C7CC44151B293F00ED5881 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		36C7CC5D151B294E00ED5881 /* libUDPClientServer-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUDPClientServer-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36FFE28E151B96890053B9E8 /* libudp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libudp.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				360892C6151A1ED0002DD234 /* Cocoa.framework in Frameworks */,
+				36FFE28F151B96890053B9E8 /* libudp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 				360892CB151A1ED0002DD234 /* UDPClientServer */,
 				360892C4151A1ED0002DD234 /* Frameworks */,
 				360892C3151A1ED0002DD234 /* Products */,
+				36FFE28E151B96890053B9E8 /* libudp.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,7 +275,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Creating universal iOS and Mac OS X build...\"\n\nOSX_BUILD_DIR=${SYMROOT}/${CONFIGURATION}\nOSX_EXECUTABLE_NAME=\"libUDPClientServer.a\"\nIOS_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-univeral-ios\nIOS_EXECUTABLE_NAME=\"libUDPClientServer-iOS.a\"\n\nUNIVERSAL_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-universal\nUNIVERSAL_EXECUTABLE_NAME=\"libudp.a\"\nmkdir ${UNIVERSAL_BUILD_DIR}\nrm -rf \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\"\n\necho \"lipo-ing with configuration ( ${CONFIGURATION} ) to output file ${UNIVERSAL_BUILD_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\" \"${IOS_BUILD_DIR}/${IOS_EXECUTABLE_NAME}\" \"${OSX_BUILD_DIR}/${OSX_EXECUTABLE_NAME}\"\n\n";
+			shellScript = "echo \"Creating universal iOS and Mac OS X build...\"\n\nOSX_BUILD_DIR=${SYMROOT}/${CONFIGURATION}\nOSX_EXECUTABLE_NAME=\"libUDPClientServer.a\"\nIOS_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-univeral-ios\nIOS_EXECUTABLE_NAME=\"libUDPClientServer-iOS.a\"\n\nUNIVERSAL_BUILD_DIR=${SYMROOT}/${CONFIGURATION}-universal\nUNIVERSAL_EXECUTABLE_NAME=\"libudp.a\"\nmkdir ${UNIVERSAL_BUILD_DIR}\nrm -rf \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\"\n\necho \"lipo-ing with configuration ( ${CONFIGURATION} ) to output file ${UNIVERSAL_BUILD_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\" \"${IOS_BUILD_DIR}/${IOS_EXECUTABLE_NAME}\" \"${OSX_BUILD_DIR}/${OSX_EXECUTABLE_NAME}\"\n\necho \"Copying final library to development library: ${SRCROOT}\"\ncp \"${UNIVERSAL_BUILD_DIR}/${UNIVERSAL_EXECUTABLE_NAME}\" \"${SRCROOT}/${UNIVERSAL_EXECUTABLE_NAME}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		36C7CC6E151B2F9500ED5881 /* ShellScript */ = {
@@ -377,6 +381,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UDPClientServer/UDPClientServer-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -386,6 +394,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UDPClientServer/UDPClientServer-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

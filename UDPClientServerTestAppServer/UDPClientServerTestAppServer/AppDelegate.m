@@ -23,11 +23,18 @@
     server.delegate = self;
 }
 
--(void)receivedHandState:(NSValue*)_handStateValue
+
+-(void)receivedData:(NSData *)_data
 {
+    // Read into char *
+//    unsigned char *message = (unsigned char*)[_data bytes];
+//    NSLog(@"Got: %s", message);
+    
+    // Read into struct, i.e. HandState
     HandState handState;
-    [_handStateValue getValue:&handState];
+    [(NSData*)_data getBytes:&handState length:sizeof(HandState)];
     NSLog(@"Received handstate: %d", handState.fingerPose);
 }
+
 
 @end

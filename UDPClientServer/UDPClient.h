@@ -35,6 +35,5 @@ typedef struct HandState
 }
 
 -(id)initWithDestinationIP:(char *)_ip andPort:(int)_port;
--(void)sendString:(NSString*)_string;
--(void)sendHandState:(struct HandState*)_handState;
+-(void)sendData:(NSData*)_data;
 @end

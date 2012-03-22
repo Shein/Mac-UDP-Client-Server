@@ -8,6 +8,10 @@
 
 #import "UDPServer.h"
 
+@interface UDPServer ()
+-(void)sendDataToDelegate:(NSData*)_data;
+@end
+
 @implementation UDPServer
 @synthesize delegate;
 
@@ -17,7 +21,7 @@
     self = [super init];
     if (self)
     {
-        //Create Socket
+        // Create Socket
         int sockHandle = socket(AF_INET, SOCK_DGRAM, 0);
         struct sockaddr_in sa;
         sa.sin_family = AF_INET;
@@ -29,7 +33,7 @@
             return self;
         }
         
-        //Create context with 'self' reference in info pointer and add to runloop callback
+        // Create context with 'self' reference in info pointer and add to runloop callback
         CFSocketContext socketContext = {0, self, NULL, NULL, NULL};
         cfSocket = CFSocketCreateWithNative(NULL, sockHandle,
                                             kCFSocketDataCallBack, receivedPacket, &socketContext); // CFSocketRef
@@ -40,23 +44,19 @@
     return self;
 }
 
-void receivedPacket (CFSocketRef s, CFSocketCallBackType callbacktype, CFDataRef address, const void *data, void *info) {
-    
-    NSData *localData = (NSData*)data;
-    unsigned char *message;
-    message = (unsigned char*)[localData bytes];
-    //Convert received packet to HandState and call message to delegate method
-    HandState _handState;
-    [(NSData*)data getBytes:&_handState length:sizeof(HandState)];
+void receivedPacket (CFSocketRef s, CFSocketCallBackType callbacktype, CFDataRef address, const void *data, void *info) 
+{    
     id _self = (id)info;
-    [_self sendHandSateToDelegate:_handState];
+    [_self sendDataToDelegate:(NSData*)data];
 }
 
--(void)sendHandSateToDelegate:(HandState)_handState{
-    if (delegate != nil && [delegate respondsToSelector:@selector(receivedHandState:)]) {
-        [delegate performSelector:@selector(receivedHandState:) withObject:[NSValue valueWithBytes:&_handState objCType:@encode(HandState) ]];
+-(void)sendDataToDelegate:(NSData*)_data
+{
+    if (delegate != nil && [delegate respondsToSelector:@selector(receivedData:)]) {
+        [delegate performSelector:@selector(receivedData:) withObject:_data];
     }
 }
+
 
 - (void)dealloc
 {

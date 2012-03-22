@@ -22,7 +22,7 @@
     client = [[UDPClient alloc] initWithDestinationIP:"192.168.0.13" andPort:11112];
 }
 
-- (IBAction)sendPacket:(id)sender {
+-(IBAction)sendPacket:(id)sender {
 
     HandState *_handState = (HandState*)malloc(sizeof(HandState));
     
@@ -31,7 +31,7 @@
     _handState->z = 1.0;
     _handState->fingerPose = GRAB;
     
-    [client sendHandState:_handState];
+    [client sendData:[NSData dataWithBytes:_handState length:sizeof(HandState)]];
 }
 
 @end

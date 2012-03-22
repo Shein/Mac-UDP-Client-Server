@@ -43,8 +43,7 @@ typedef struct HandState
 @protocol UDPServerDelegate <NSObject>
 
 @required
--(void)receivedHandState:(NSValue*)_handStateValue;
-
+-(void)receivedData:(NSData*)_data;
 @end
 
 @interface UDPServer : NSObject {
@@ -60,7 +59,6 @@ typedef struct HandState
 @property (nonatomic, assign) id<UDPServerDelegate> delegate;
 
 -(id)initWithPortNumber:(int)_portNumber;
--(void)sendHandSateToDelegate:(HandState)_handState;
 
 //Callback method for UDP
 void receivedPacket (CFSocketRef s, CFSocketCallBackType callbacktype, CFDataRef address, const void *data, void *info);

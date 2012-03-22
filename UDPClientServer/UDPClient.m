@@ -31,21 +31,10 @@
     return self;
     
 }
--(void)sendString:(NSString*)_string{
-    CFDataRef cfPackedData = (CFDataRef)[_string dataUsingEncoding:NSASCIIStringEncoding];
-    NSLog(@"%@", cfPackedData);
-    
-    CFDataRef cfAddr = CFDataCreate(NULL, (unsigned char *)&sa, sizeof(sa));
-    CFSocketError sendPacketResult = CFSocketSendData(cfSocket, cfAddr, cfPackedData, 0.0);
-    if (sendPacketResult != kCFSocketSuccess)
-    {
-        // try again in 5 seconds
-    }
-}
 
--(void)sendHandState:(HandState*)_handState{
-    NSData *data = [NSData dataWithBytes:_handState length:sizeof(HandState)];
-    CFDataRef cfPackedData = (CFDataRef)data;
+-(void)sendData:(NSData*)_data
+{
+    CFDataRef cfPackedData = (CFDataRef)_data;
     
     CFDataRef cfAddr = CFDataCreate(NULL, (unsigned char *)&sa, sizeof(sa));
     CFSocketError sendPacketResult = CFSocketSendData(cfSocket, cfAddr, cfPackedData, 0.0);
@@ -53,6 +42,7 @@
     {
         // try again in 5 seconds
     }
+
 }
 
 @end
