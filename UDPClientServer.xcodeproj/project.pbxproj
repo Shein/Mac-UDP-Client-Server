@@ -6,6 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		36C7CC62151B2A4500ED5881 /* Build & merge Libraries */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 36C7CC63151B2A4500ED5881 /* Build configuration list for PBXAggregateTarget "Build & merge Libraries" */;
+			buildPhases = (
+				36C7CC6A151B2B0400ED5881 /* ShellScript */,
+			);
+			dependencies = (
+				36C7CC67151B2A5B00ED5881 /* PBXTargetDependency */,
+				36C7CC69151B2A5B00ED5881 /* PBXTargetDependency */,
+			);
+			name = "Build & merge Libraries";
+			productName = "Build & merge Libraries";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		360892C6151A1ED0002DD234 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360892C5151A1ED0002DD234 /* Cocoa.framework */; };
 		360892D0151A1ED0002DD234 /* UDPClientServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892CF151A1ED0002DD234 /* UDPClientServer.m */; };
@@ -13,7 +29,49 @@
 		360892D9151A1F1A002DD234 /* UDPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892D7151A1F1A002DD234 /* UDPServer.m */; };
 		360892DC151A1F92002DD234 /* UDPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892DA151A1F92002DD234 /* UDPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		360892DD151A1F92002DD234 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892DB151A1F92002DD234 /* UDPClient.m */; };
+		36C7CC51151B294E00ED5881 /* UDPClientServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892CF151A1ED0002DD234 /* UDPClientServer.m */; };
+		36C7CC52151B294E00ED5881 /* UDPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892D7151A1F1A002DD234 /* UDPServer.m */; };
+		36C7CC53151B294E00ED5881 /* UDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 360892DB151A1F92002DD234 /* UDPClient.m */; };
+		36C7CC55151B294E00ED5881 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360892C5151A1ED0002DD234 /* Cocoa.framework */; };
+		36C7CC57151B294E00ED5881 /* UDPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892D6151A1F1A002DD234 /* UDPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36C7CC58151B294E00ED5881 /* UDPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 360892DA151A1F92002DD234 /* UDPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		36C7CC3D151B285900ED5881 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+		36C7CC59151B294E00ED5881 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		36C7CC66151B2A5B00ED5881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 360892B9151A1ED0002DD234 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 360892C1151A1ED0002DD234;
+			remoteInfo = UDPClientServer;
+		};
+		36C7CC68151B2A5B00ED5881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 360892B9151A1ED0002DD234 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36C7CC4F151B294E00ED5881;
+			remoteInfo = "UDPClientServer iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		360892C2151A1ED0002DD234 /* libUDPClientServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUDPClientServer.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +86,11 @@
 		360892D7151A1F1A002DD234 /* UDPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPServer.m; sourceTree = "<group>"; };
 		360892DA151A1F92002DD234 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPClient.h; sourceTree = "<group>"; };
 		360892DB151A1F92002DD234 /* UDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPClient.m; sourceTree = "<group>"; };
+		36C7CC44151B293F00ED5881 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		36C7CC48151B293F00ED5881 /* UDPClientServer-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDPClientServer-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		36C7CC49151B293F00ED5881 /* UDPClientServer_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPClientServer_iOS.h; sourceTree = "<group>"; };
+		36C7CC4A151B293F00ED5881 /* UDPClientServer_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPClientServer_iOS.m; sourceTree = "<group>"; };
+		36C7CC5D151B294E00ED5881 /* libUDPClientServer-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUDPClientServer-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +102,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		36C7CC54151B294E00ED5881 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C7CC55151B294E00ED5881 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				360892CB151A1ED0002DD234 /* UDPClientServer */,
+				36C7CC46151B293F00ED5881 /* UDPClientServer-iOS */,
 				360892C4151A1ED0002DD234 /* Frameworks */,
 				360892C3151A1ED0002DD234 /* Products */,
 			);
@@ -55,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				360892C2151A1ED0002DD234 /* libUDPClientServer.a */,
+				36C7CC5D151B294E00ED5881 /* libUDPClientServer-iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				360892C5151A1ED0002DD234 /* Cocoa.framework */,
+				36C7CC44151B293F00ED5881 /* Foundation.framework */,
 				360892C7151A1ED0002DD234 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -100,6 +174,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		36C7CC46151B293F00ED5881 /* UDPClientServer-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				36C7CC49151B293F00ED5881 /* UDPClientServer_iOS.h */,
+				36C7CC4A151B293F00ED5881 /* UDPClientServer_iOS.m */,
+				36C7CC47151B293F00ED5881 /* Supporting Files */,
+			);
+			path = "UDPClientServer-iOS";
+			sourceTree = "<group>";
+		};
+		36C7CC47151B293F00ED5881 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36C7CC48151B293F00ED5881 /* UDPClientServer-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,6 +201,15 @@
 			files = (
 				360892D8151A1F1A002DD234 /* UDPServer.h in Headers */,
 				360892DC151A1F92002DD234 /* UDPClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36C7CC56151B294E00ED5881 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C7CC57151B294E00ED5881 /* UDPServer.h in Headers */,
+				36C7CC58151B294E00ED5881 /* UDPClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,12 +225,32 @@
 				360892C0151A1ED0002DD234 /* Headers */,
 			);
 			buildRules = (
+				36C7CC3D151B285900ED5881 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
 			name = UDPClientServer;
 			productName = UDPClientServer;
 			productReference = 360892C2151A1ED0002DD234 /* libUDPClientServer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		36C7CC4F151B294E00ED5881 /* UDPClientServer iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36C7CC5A151B294E00ED5881 /* Build configuration list for PBXNativeTarget "UDPClientServer iOS" */;
+			buildPhases = (
+				36C7CC50151B294E00ED5881 /* Sources */,
+				36C7CC54151B294E00ED5881 /* Frameworks */,
+				36C7CC56151B294E00ED5881 /* Headers */,
+				36C7CC6E151B2F9500ED5881 /* ShellScript */,
+			);
+			buildRules = (
+				36C7CC59151B294E00ED5881 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "UDPClientServer iOS";
+			productName = UDPClientServer;
+			productReference = 36C7CC5D151B294E00ED5881 /* libUDPClientServer-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -154,9 +275,40 @@
 			projectRoot = "";
 			targets = (
 				360892C1151A1ED0002DD234 /* UDPClientServer */,
+				36C7CC4F151B294E00ED5881 /* UDPClientServer iOS */,
+				36C7CC62151B2A4500ED5881 /* Build & merge Libraries */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36C7CC6A151B2B0400ED5881 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo ${BUILT_PRODUCTS_DIR}";
+		};
+		36C7CC6E151B2F9500ED5881 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DEBUG=\"true\"\n\nif [ $DEBUG = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\necho \"PLATFORM_NAME = $PLATFORM_NAME\"\necho \"SDK_NAME = $SDK_NAME\"\nfi\n\nSDK_VERSION = \"AAAAAA\"#$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\necho \"SDK VERSION = $SDK_VERSION\"\n\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ] \nthen\nOTHER_BUILD_SDK = iphoneos${SDK_VERSION}\nelse\nOTHER_BUILD_SDK = iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode set to build for ${PLATFORM_NAME} with SDK ${SDK_VERSION} and deployment target ${IPHONEOS_DEPLOYMENT_TARGET}\"\necho \"We will also build for ${OTHER_BUILD_SDK}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		360892BE151A1ED0002DD234 /* Sources */ = {
@@ -169,7 +321,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		36C7CC50151B294E00ED5881 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C7CC51151B294E00ED5881 /* UDPClientServer.m in Sources */,
+				36C7CC52151B294E00ED5881 /* UDPServer.m in Sources */,
+				36C7CC53151B294E00ED5881 /* UDPClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36C7CC67151B2A5B00ED5881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 360892C1151A1ED0002DD234 /* UDPClientServer */;
+			targetProxy = 36C7CC66151B2A5B00ED5881 /* PBXContainerItemProxy */;
+		};
+		36C7CC69151B2A5B00ED5881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36C7CC4F151B294E00ED5881 /* UDPClientServer iOS */;
+			targetProxy = 36C7CC68151B2A5B00ED5881 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		360892D1151A1ED0002DD234 /* Debug */ = {
@@ -235,6 +410,42 @@
 			};
 			name = Release;
 		};
+		36C7CC5B151B294E00ED5881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServer/UDPClientServer-Prefix.pch";
+				PRODUCT_NAME = "UDPClientServer-iOS";
+				SDKROOT = iphoneos5.1;
+			};
+			name = Debug;
+		};
+		36C7CC5C151B294E00ED5881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UDPClientServer/UDPClientServer-Prefix.pch";
+				PRODUCT_NAME = "UDPClientServer-iOS";
+				SDKROOT = iphoneos5.1;
+			};
+			name = Release;
+		};
+		36C7CC64151B2A4500ED5881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "UDPClientServer Universal";
+			};
+			name = Debug;
+		};
+		36C7CC65151B2A4500ED5881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "UDPClientServer Universal";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -252,6 +463,24 @@
 			buildConfigurations = (
 				360892D4151A1ED0002DD234 /* Debug */,
 				360892D5151A1ED0002DD234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36C7CC5A151B294E00ED5881 /* Build configuration list for PBXNativeTarget "UDPClientServer iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C7CC5B151B294E00ED5881 /* Debug */,
+				36C7CC5C151B294E00ED5881 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36C7CC63151B2A4500ED5881 /* Build configuration list for PBXAggregateTarget "Build & merge Libraries" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C7CC64151B2A4500ED5881 /* Debug */,
+				36C7CC65151B2A4500ED5881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

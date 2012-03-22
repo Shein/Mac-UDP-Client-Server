@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Build &amp; merge Libraries.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>UDPClientServer iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>UDPClientServer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,21 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>360892C1151A1ED0002DD234</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36C7CC42151B293E00ED5881</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36C7CC4F151B294E00ED5881</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36C7CC62151B2A4500ED5881</key>
 		<dict>
 			<key>primary</key>
 			<true/>

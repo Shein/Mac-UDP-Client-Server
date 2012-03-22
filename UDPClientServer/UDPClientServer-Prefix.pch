@@ -3,5 +3,12 @@
 //
 
 #ifdef __OBJC__
+
+#ifdef __MAC_10_6
     #import <Cocoa/Cocoa.h>
+#elifdef __IPHONE_4_0
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
 #endif
